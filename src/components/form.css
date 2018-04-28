@@ -1,9 +1,9 @@
 form {
-    padding: 20px
+    padding: 10px 20px 10px 20px;
 }
 p {
     font-size: 22px;
 }
-.base {
+.picker {
     padding: 5px;
 }

@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {pizzaBases} from './PizzaPrices'
-import {ADD_BASE} from '../actions/PickBase'
+import {ADD_BASE} from '../actions/PizzaPicker'
 import { RadioButtonGroup, RadioButton } from 'material-ui/RadioButton'
 import './form.css'
 
@@ -25,7 +25,7 @@ class PickBase extends Component {
                 onChange={this.handleRadio}>
                     {pizzaBases.map(pizzaBase => (
                     <RadioButton
-                    className="base"
+                    className="picker"
                     value={[pizzaBase.price]} 
                     label={`${[pizzaBase.name]} ----- ${[pizzaBase.price]} €`} 
                     key={pizzaBase.id} 

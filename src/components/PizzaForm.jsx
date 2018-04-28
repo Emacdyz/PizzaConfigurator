@@ -1,8 +1,10 @@
 // src/compoments/PizzaForm.jsx
 import React, { Component } from 'react'
 import PickBase from './PickBase'
+import PickSauce from './PickSauce';
 import Paper from 'material-ui/Paper'
 import './PizzaForm.css'
+
 
 
 class PizzaForm extends Component {
@@ -15,6 +17,7 @@ class PizzaForm extends Component {
                 </div>
                 
                 <PickBase/>
+                <PickSauce/>
             </Paper>
         )
 
