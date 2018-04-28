@@ -6,13 +6,11 @@ import PizzaForm from './components/PizzaForm'
 class App extends Component {
   render() {
     return (
-      <MuiThemeProvider  >
+      <MuiThemeProvider>
         <nav>
           <AppBar title="New Age Pizza" />
         </nav>
-        <main>
         <PizzaForm/>
-        </main>
       </MuiThemeProvider>
     );
   }

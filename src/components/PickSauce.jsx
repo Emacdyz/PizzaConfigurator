@@ -9,8 +9,8 @@ import './form.css'
 
 class PickSauce extends Component {
 
-    handleRadio = (e) => {
-        this.props.dispatch({type:ADD_SAUCE, payload: e.target.value})
+    handleRadio = (event) => {
+        this.props.dispatch({type:ADD_SAUCE, payload: event.target.value})
         
     }
     

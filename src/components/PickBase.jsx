@@ -9,9 +9,8 @@ import './form.css'
 
 class PickBase extends Component {
 
-    handleRadio = (e) => {
-        this.props.dispatch({type:ADD_BASE, payload: e.target.value})
-        
+    handleRadio = (event) => {
+        this.props.dispatch({type:ADD_BASE, payload: event.target.value})
     }
     
     render () {

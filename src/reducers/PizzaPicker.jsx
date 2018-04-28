@@ -1,13 +1,21 @@
 //src/reducers/PizzaPicker.jsx
-import {ADD_BASE} from '../actions/PizzaPicker'
-import {ADD_SAUCE} from '../actions/PizzaPicker'
+import {ADD_BASE, ADD_SAUCE, ADD_TOPPING } from '../actions/PizzaPicker'
 
-export default (state = [], action) => {
+const initialState = [];
+
+export default (state = initialState, action) => {
   switch(action.type) {
     case ADD_BASE:
       return state.concat(action.payload)
     case ADD_SAUCE:
       return state.concat(action.payload)
+    case ADD_TOPPING:
+      if (state.length < 3 ) {
+        return state.concat(action.payload)
+      } else {
+        return state
+      }
+      
     default:
       return state
   }
