@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {pizzaBases} from './PizzaPrices'
-import {ADD_BASE} from '../actions/PizzaPicker'
+import {addBase} from '../actions/PizzaPicker'
 import { RadioButtonGroup, RadioButton } from 'material-ui/RadioButton'
 import './form.css'
 
@@ -10,12 +10,12 @@ import './form.css'
 class PickBase extends Component {
 
     handleRadio = (event) => {
-        this.props.dispatch({type:ADD_BASE, payload: event.target.value})
+        this.props.addBase(event.target.value)
+        
     }
     
     render () {
         
-       
         return (
             <form>
                 <p> Pick your pizza base:</p>
@@ -31,15 +31,8 @@ class PickBase extends Component {
                     />))}
                 </RadioButtonGroup>
             </form>
-          
         )
     }
 }
 
-const mapStateToProps = function (state) {
-    return {
-      pizzaBases: state.pizzaBases
-    }
-  }
-
-export default connect(mapStateToProps)(PickBase)
+export default connect(null, {addBase})(PickBase)

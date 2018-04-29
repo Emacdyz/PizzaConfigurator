@@ -1,6 +1,12 @@
 // src/reducers/index.js
-import PizzaPicker from './PizzaPicker'
+import PickBase from './PickBase'
+import PickSauce from './PickSauce'
+import PickTopping from './PickTopping'
+// import PizzaPicker from './PizzaPicker'
 
 export default {
-    PizzaPicker
+    // PizzaPicker,
+    PickBase,
+    PickSauce,
+    PickTopping
 } 
