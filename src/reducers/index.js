@@ -2,11 +2,11 @@
 import PickBase from './PickBase'
 import PickSauce from './PickSauce'
 import PickTopping from './PickTopping'
-// import PizzaPicker from './PizzaPicker'
+import TurboDelivery from './TurboDelivery'
 
 export default {
-    // PizzaPicker,
     PickBase,
     PickSauce,
-    PickTopping
+    PickTopping,
+    TurboDelivery
 } 

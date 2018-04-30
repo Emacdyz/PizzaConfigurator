@@ -3,7 +3,8 @@ export const ADD_BASE = "ADD_BASE"
 export const ADD_SAUCE = "ADD_SAUCE"
 export const ADD_TOPPING = "ADD_TOPPING"
 export const REMOVE_TOPPING = "REMOVE_TOPPING"
-export const CALCULATE_TOTAL_PRICE = "CALCULATE_TOTAL_PRICE"
+export const ADD_TURBO_DELIVERY = "ADD_TURBO_DELIVERY"
+export const REMOVE_TURBO_DELIVERY = "REMOVE_TURBO_DELIVERY"
 
 export const addBase = (base) => {
     return {
@@ -32,21 +33,20 @@ export const removeTopping = (topping) => {
     payload: topping
   }
 }
-// need delivery action 
 
-// export const calculateTotalPrice = (dispatch, getState) => { 
-//   const state = getState();
-//   let totalPrice = 0;
+export const addTurboDelivery = (turboDelivery) => {
+  return {
+    type: ADD_TURBO_DELIVERY,
+    payload: turboDelivery
+  }
+}
 
-//   totalPrice = state.PickBase
+export const removeTurboDelivery = (turboDelivery) => {
+  return {
+    type: REMOVE_TURBO_DELIVERY,
+    payload: turboDelivery
+  }
+}
 
-//   dispatch( {
-//     type: CALCULATE_TOTAL_PRICE,
-//     payload: totalPrice
-//   })
-// }  
 
-// export const calculateTotalPrice = () => (total, getState) => {
-//   const state = getState();
-//   let totalPrice = 0;
 

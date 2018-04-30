@@ -4,9 +4,7 @@ import {ADD_BASE} from '../actions/PizzaPicker'
 export default (state = 0, action) => {
   switch(action.type) {
     case ADD_BASE:
-    return state = action.payload
-    // case CALCULATE_TOTAL_PRICE:
-    // return state
+      return state = action.payload
       
     default:
       return state

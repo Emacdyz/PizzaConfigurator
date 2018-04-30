@@ -12,15 +12,11 @@ class PickTopping extends Component {
     handleCheck = (event) => {
         if (event.target.checked) {
             this.props.addTopping(event.target.value)
-        } else  {
+        } 
+        else  {
             this.props.removeTopping(event.target.value)
-        }
-        
+        }   
     }
-// si c'est dedans retire sinon
-    // handleUncheck = (event) => {
-        
-    // }
 
     render () {
        

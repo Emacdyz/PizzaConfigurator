@@ -11,9 +11,9 @@ export default (state = [], action) => {
         }
 
         case REMOVE_TOPPING:
-        return state.filter(topping => topping !== action.payload)
+          return state.filter(topping => topping !== action.payload)
       
         default:
-        return state
+          return state
     }
 }

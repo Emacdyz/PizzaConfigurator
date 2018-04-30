@@ -1,28 +1,25 @@
 //src/components/totalprice.jsx
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import './TotalPrice.css'
 
 
 class TotalPrice extends Component {
 
-    // getSum (total, num) {
-    //     return total + num;
-    // }
+    onClick () {
+        document.write("Thank you for your ordered at New Age Pizza!")
+    }
 
     render () {
-        const {base, sauce, toppings} = this.props
-        console.log(toppings)
-        //const totalarray = base.concat(sauce)
-        //const reducer = (accumulator, currentValue) => accumulator + currentValue;
-        //const Total = Number(totalarray.reduce(reducer))
-        // const pizza = this.props.PizzaPicker
-        // console.log(pizza)
-        
-        // let pizzaPrice = Number(base[0])+Number(sauce[0])
-        
-        
+        const {base, sauce, toppings, turboDelivery} = this.props
+        const subTotal = Number(base) + Number(sauce) + toppings.length * 0.5
+        const Total = (subTotal + (subTotal * Number(turboDelivery))).toFixed(2)
+
         return (
-            <p> Price: {Number(base) + Number(sauce) + toppings.length * 0.5 } </p>
+            <div className="price-box">
+                <p>{Total} € </p>
+                <button onClick={this.onClick}> Order </button>
+            </div>
             
         )
     }
@@ -30,10 +27,10 @@ class TotalPrice extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    // pizza: state.PizzaPicker
     base: state.PickBase,
     sauce: state.PickSauce,
-    toppings: state.PickTopping
+    toppings: state.PickTopping,
+    turboDelivery: state.TurboDelivery
 })
 
 export default connect(mapStateToProps)(TotalPrice)
