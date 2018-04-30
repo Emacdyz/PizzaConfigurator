@@ -15,26 +15,33 @@ class PickTopping extends Component {
         } 
         else  {
             this.props.removeTopping(event.target.value)
-        }   
+        }
     }
 
     render () {
+    //    const numberOfToppings = this.props.toppings.length
        
+    //    console.log(numberOfToppings);
         return (
             <form>
                 <p> Pick your toppings: </p>
                 <span><em>Max. 3 toppings (+ 0,50/extra)</em></span>
                 {pizzaToppings.map(pizzaTopping => (
                 <Checkbox
-                className="picker"
+                className="picker topping"
                 value={pizzaTopping} 
                 label={pizzaTopping} 
                 key={pizzaTopping} 
                 onCheck={this.handleCheck}
+                // disabled={numberOfToppings > 3}
                 />))}
             </form>
         )
     }
 }
+
+// const mapStateToProps = (state) => ({
+//     toppings: state.PickTopping
+// })
 
 export default connect(null, {addTopping, removeTopping})(PickTopping)
