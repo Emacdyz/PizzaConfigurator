@@ -10,26 +10,31 @@ import './form.css'
 class PickTopping extends Component {
 
     handleCheck = (event) => {
-        this.props.addTopping(event.target.value)
+        if (event.target.checked) {
+            this.props.addTopping(event.target.value)
+        } else  {
+            this.props.removeTopping(event.target.value)
+        }
+        
     }
-
-    handleUncheck = (event) => {
-        this.props.removeTopping(event.target.value)
-    }
+// si c'est dedans retire sinon
+    // handleUncheck = (event) => {
+        
+    // }
 
     render () {
        
         return (
             <form>
                 <p> Pick your toppings: </p>
-                <span><em>Max. 3 toppings (+ 0,50 /extra)</em></span>
+                <span><em>Max. 3 toppings (+ 0,50/extra)</em></span>
                 {pizzaToppings.map(pizzaTopping => (
                 <Checkbox
                 className="picker"
-                value={[pizzaTopping.price]} 
-                label={[pizzaTopping.name]} 
-                key={pizzaTopping.id} 
-                onCheck={this.handleCheck || this.handleUncheck}
+                value={pizzaTopping} 
+                label={pizzaTopping} 
+                key={pizzaTopping} 
+                onCheck={this.handleCheck}
                 />))}
             </form>
         )

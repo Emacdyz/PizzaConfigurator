@@ -1,7 +1,7 @@
 //src/reducers/PickSauce.jsx
 import {ADD_SAUCE} from '../actions/PizzaPicker'
 
-export default (state = [], action) => {
+export default (state = 0, action) => {
     switch(action.type) {
         case ADD_SAUCE:
         return state = action.payload

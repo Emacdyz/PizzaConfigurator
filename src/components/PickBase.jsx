@@ -25,8 +25,8 @@ class PickBase extends Component {
                     {pizzaBases.map(pizzaBase => (
                     <RadioButton
                     className="picker"
-                    value={[pizzaBase.price]} 
-                    label={`${[pizzaBase.name]} ----- ${[pizzaBase.price]} €`} 
+                    value={pizzaBase.price} 
+                    label={`${pizzaBase.name} ----- ${pizzaBase.price} €`} 
                     key={pizzaBase.id} 
                     />))}
                 </RadioButtonGroup>
