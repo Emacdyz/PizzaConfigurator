@@ -12,12 +12,12 @@ The assignement was to create a pizza configurator with react/redux, with a set 
 
 #### Assignments 
 
-You're asked to create a pizza configurator for NewAgePizza.com, a new and hip venture to get your pizza. It should be a single page that contains all the following elements.
+> You're asked to create a pizza configurator for NewAgePizza.com, a new and hip venture to get your pizza. It should be a single page > > > that contains all the following elements.
 
-First you pick your base. You have four options:
+> First you pick your base. You have four options:
 
-25cm NY Style € 8,99
-30cm NY Style € 11,49
+> * 25cm NY Style € 8,99
+> * 30cm NY Style € 11,49
 35cm NY Style € 13,49
 20cm NY Style € 6,45
 After that you pick your sauce options:
