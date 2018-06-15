@@ -5,7 +5,7 @@
 The assignement was to create a pizza configurator with react/redux, with a set of pizza toppings, sauces, and bases available. 
 
 ![alt text](https://github.com/Emacdyz/PizzaConfigurator/public/Visu.png)
-![alt text](https://github.com/Emacdyz/PizzaConfigurator/public/Visu2.png)
+
 
 ## Run the app 🚀
 
